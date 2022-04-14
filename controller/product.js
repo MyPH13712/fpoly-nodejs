@@ -26,7 +26,7 @@ export const creatPro = async (req, res) => {
 }
 export const deletePro = async (req, res) => {
     try {
-        const product = await Product.findOneandDelete({_id: req.params.id}).exec()
+        const product = await Product.findOneAndDelete({_id: req.params.id}).exec()
         res.json(product)
     } catch (error) {
         res.status(400).json({ message: "Ko xoa dc" })
@@ -34,7 +34,7 @@ export const deletePro = async (req, res) => {
 }
 export const updatePro = async (req, res) => {
     try {
-        const product = await Product.findOneandUpdate({_id: req.params.id}, req.body, {new:true}).exec()
+        const product = await Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true}).exec()
         res.json(product)
     } catch (error) {
         res.status(400).json({ message: "Ko hien thi dc" })

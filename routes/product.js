@@ -9,3 +9,4 @@ router.post('/products', creatPro),
 router.put('/products/:id', updatePro)
 router.delete('/products/:id', deletePro)
 
+export default router

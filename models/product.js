@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const productSchema = new Schema({
+const productSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -17,5 +17,6 @@ const productSchema = new Schema({
     desc: {
         type: String,
     }
-}, { timestamp: true })
+}, { timestamps: true })
+
 export default mongoose.model('Product', productSchema)

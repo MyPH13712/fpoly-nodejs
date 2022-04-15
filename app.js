@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost:27017/baithi')
     .catch((error) => console.log(error));
     
 // connection
-const PORT = 8000;
+const PORT = 8001;
 app.listen(PORT, () => {
     console.log("Server is running port", PORT);
 })
